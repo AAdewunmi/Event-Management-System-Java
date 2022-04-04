@@ -12,6 +12,7 @@
 3. What are the nice to haves?
 
 
-5. When will the project be complete?
+4. When will the project be complete?
 
+  Once all MVP features have been developed.
 
