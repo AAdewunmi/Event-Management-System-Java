@@ -13,6 +13,6 @@
 
 
 4. When will the project be complete?
-
-  Once all MVP features have been developed.
+    
+    Once all MVP features have been developed.
 
