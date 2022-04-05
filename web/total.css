@@ -1,0 +1,116 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 5 Apr 2022, 10:26:05
+    Author     : adrianadewunmi
+*/
+*{
+  border-width:0;
+  font-style: normal;
+  color: white;
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+html{
+    background-image: url('https://wintertime.com.my/wp-content/uploads/2019/07/event-production-company-p2-entertainment-group-1.jpg');
+  background-repeat: no-repeat;
+  background-size: 110%;
+  opacity: 30%;
+  background-color: black;
+}
+
+h1{
+  background-image:url('https://cdn.wallpapersafari.com/75/49/lg7sK4.png');
+  box-shadow: 0 0 40px #5ee4ff;
+  background-color: black;
+  border: 1px solid;
+  width: 50%;
+  margin-left: 22%;
+  margin-right: 25%;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+#common{
+  box-shadow: 0 0 40px #5ee4ff;
+  background-color: black;
+  border: 1px solid;
+  width: 50%;
+  margin-left: 22%;
+  margin-right: 25%;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+h4{
+  font-size: 25px;
+}
+
+
+
+button{
+  padding: 15px;
+  font-weight: bold;
+  font-size: 100%;
+  width: 170px;
+  text-align:center;
+  padding-top: 10px;
+  color: black;
+  background-color:#5ee4ff;
+  height: 40px;
+  align-self: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #5ee4ff ;
+}
+
+button:hover{
+  background: #5ee4ff;
+  color: black;
+  box-shadow: 0 0 40px #5ee4ff ;
+}
+
+div{
+  background-image:url('https://cdn.wallpapersafari.com/75/49/lg7sK4.png');
+  background-color: black;
+  box-shadow: 0 0 40px #5ee4ff;
+  width: 50%;
+  margin-left: 20%;
+  margin-right: 20%;
+  border: 5px solid;
+  border-radius: 50px;
+  padding: 50px;
+}
+
+
+#text{
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  color: black;
+  font-size: 15px;
+}
+#sub{
+   padding: 15px;
+  font-weight: bold;
+  font-size: 100%;
+  width: 170px;
+  text-align:center;
+  padding-top: 10px;
+  color: black;
+  background-color:#5ee4ff;
+  height: 40px;
+  align-self: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #5ee4ff ;
+}
+
+#sub:hover{
+     background: #5ee4ff;
+  color: black;
+  box-shadow: 0 0 40px #5ee4ff ;
+}
+
