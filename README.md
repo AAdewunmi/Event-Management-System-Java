@@ -17,4 +17,9 @@
 4. When will the project be complete?
     
     Once all MVP features have been developed.
+    
+    
+### Although the project is a work in progress, here is a screenshot of landing page.
 
+
+![Image description](web/landingpage.jpeg)
