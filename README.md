@@ -1,10 +1,12 @@
-# Event-Management-System-Java
-
-  
+# Welcome To Evently ... An Event Management Portal!
 
 1. What is the project?
 
-    Event Management System: It is a Java 11 Web Application for registering events.
+    Evently is an Event Management System. 
+    
+    It is a Web Application for registering events,
+    
+    and it's being built using Java 11 technology.
 
 2. What is the MVP (Minimal Viable Product)?
 
