@@ -3,13 +3,33 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
 -->
+<!-- ADMIN LOGIN PAGE -->
 <html>
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h2 style="text-align: center" id="common">Please Login Using Valid Username and Password</h2>
+        <link rel="stylesheet" href="total.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div>
+        <left>
+           <p>
+               <a href="index.html"><button> Home Page </button> </a>
+           </p>
+       </left>
+        <center><h2 id="common"> Admin Login Page </h2></center>
+        <center>
+            <form method="post" action="ValidateAd">
+                Username:<br><br>
+                <input type="text" id="text" name="Ausername" placeholder="Username"><br><p>
+                Password:<br><br>
+                <input type="password" id="text" name="Apassword" placeholder="Password"><br><br><p>
+                <input type="submit" id="sub" value="Submit">
+            </form>
+    </center>
+        </div>
     </body>
 </html>
