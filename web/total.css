@@ -14,11 +14,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 }
 
 html{
-  
   background-image: url('https://wintertime.com.my/wp-content/uploads/2019/07/event-production-company-p2-entertainment-group-1.jpg');
   background-repeat: no-repeat;
   background-size: 110%;
-  opacity: 30%;
+  background-opacity: 70%;
   background-color: black;
 }
 
@@ -51,8 +50,6 @@ h4{
   font-size: 25px;
 }
 
-
-
 button{
   padding: 15px;
   font-weight: bold;
@@ -62,7 +59,7 @@ button{
   padding-top: 10px;
   color: black;
   background-color:#5ee4ff;
-  height: 50px;
+  height: 49px;
   align-self: center;
   border-radius: 10px;
   box-shadow: 0 0 20px #5ee4ff ;
@@ -114,4 +111,3 @@ div{
   color: black;
   box-shadow: 0 0 40px #5ee4ff ;
 }
-
