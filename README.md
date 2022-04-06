@@ -22,4 +22,4 @@
 ### Although the project is a work in progress, here is a screenshot of landing page.
 
 
-![Image description](web/landingpage.jpeg)
+![Image description](web/screenshot.jpeg)
