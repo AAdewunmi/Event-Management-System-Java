@@ -34,6 +34,20 @@ h1{
   border-radius: 30px;
 }
 
+h4{
+  background-image:url('https://cdn.wallpapersafari.com/75/49/lg7sK4.png');
+  box-shadow: 0 0 40px #5ee4ff;
+  background-color: black;
+  border: 1px solid;
+  width: 50%;
+  margin-left: 22%;
+  margin-right: 25%;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 30px;
+  color: red;
+}
+
 #common{
   box-shadow: 0 0 40px #5ee4ff;
   background-color: black;
@@ -164,3 +178,5 @@ div{
 .topnav-right {
   float: right;
 }
+
+
