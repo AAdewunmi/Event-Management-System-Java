@@ -10,6 +10,10 @@
 
 2. What is the MVP (Minimal Viable Product)?
 
+    Admin User: Login, Logout.
+    
+    Participant User: Register, Login, Pay for Event, Logout.
+
 
 3. What are the nice to haves?
 
