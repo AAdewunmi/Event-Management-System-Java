@@ -8,7 +8,7 @@ import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 
@@ -39,24 +39,28 @@ public class StoreP extends HttpServlet {
         
         // EventlyDB, name of table plogindetails
         
-        if(userPassword.equals(confirmUserPassword)){
+        String a1 = userName;
+        String a2 = userPassword;
+        String a3 = confirmUserPassword;
+        String a4 = participantsName;
+        
+        if(a2.equals(a3)){
             
             try{
-                Class.forName("com.mysql.jdbc.Driver");
-                String conURL = "jdbc:mysql:// localhost:3306/";
-                String dbname = "EventlyDB";
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                String conURL = "jdbc:mysql://localhost:3306/EventlyDB";
                 String dbusername = "root";
                 String dbuserpassword = "abc";
                 Connection con;
-                con = DriverManager.getConnection(conURL + dbname, dbusername, dbuserpassword);
+                con = DriverManager.getConnection(conURL , dbusername, dbuserpassword);
                 Statement statement = con.createStatement();
-                String mysqlQuery = "insert into plogindetails values('"+userName+"','"+userPassword+"','"+participantsName+"')";
-                ResultSet resultSet = statement.executeQuery(mysqlQuery);
+                String mysqlQuery = "insert into plogindetails values('"+a1+"','"+a2+"','"+a4+"')";
+                statement.executeUpdate(mysqlQuery);
                 RequestDispatcher requestDispatcher;
                 requestDispatcher = request.getRequestDispatcher("Plogin.html");
                 requestDispatcher.forward(request, response);
                 con.close();
-            }catch(Exception e){
+            }catch(ServletException | IOException | ClassNotFoundException | SQLException e){
                 System.out.println(e);
             }
         
