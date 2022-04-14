@@ -8,6 +8,10 @@
         <servlet-name>StoreP</servlet-name>
         <servlet-class>StoreP</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VaPa</servlet-name>
+        <servlet-class>VaPa</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ValidateAd</servlet-name>
         <url-pattern>/ValidateAd</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>StoreP</servlet-name>
         <url-pattern>/StoreP</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VaPa</servlet-name>
+        <url-pattern>/VaPa</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
