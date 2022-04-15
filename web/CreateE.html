@@ -3,13 +3,38 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
 -->
+<!-- CREATE EVENT PAGE -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <h1 style="text-align: center">Welcome To Evently ... An Event Management Portal!</h1>
+        <link rel="stylesheet" href="total.css">
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+        <title>Create Event</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <<h2 id="common" style="text-align: center">Add Events</h2>
     </head>
     <body>
-        <div>TODO write content</div>
+        <div>
+          <center>
+            <form method="post" action="AddEvent">
+            Event Number:<br><br>
+            <input id="text" type="text" name="EventNo"><br><br>
+            Event Name:<br><br>
+            <input id="text" type="text" name="EventName"><br><br>
+            Coordinator Name:<br><br>
+            <input id="text" type="text" name="coordinatorName"><br><br>
+            Coordinator Number:<br><br>
+            <input id="text" type="text" name="CoordinatorNo"><br><br>
+            Fee for registration:<br><br>
+            <input id="text" type="text" name="fee"><br><br><p></p>
+            Venue of event:<br><br>
+            <input id="text" type="text" name="venue"><br><br><p></p>
+            Date of event:<br><br>
+            <input id="text" type="text" name="date"><br><br><p></p>
+            <input type="submit" id="sub" value="Submit">
+            </form>
+         </center> 
+        </div>
     </body>
 </html>
