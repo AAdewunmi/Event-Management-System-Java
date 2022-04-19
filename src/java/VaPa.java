@@ -3,6 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
+/**
+ /*
+ * @author adrianadewunmi
+ * Participant Login Validation Servlet
+ * for registering new participants.
+ */
+
 import java.io.*;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;

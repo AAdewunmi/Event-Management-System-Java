@@ -3,6 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
+/**
+ * @author adrianadewunmi
+ * Admin Login Validation Servlet
+ * for administrator login
+ */
+
 import java.io.*;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;

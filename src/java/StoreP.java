@@ -13,8 +13,8 @@ import java.sql.Statement;
 
 
 /**
- *
  * @author adrianadewunmi
+ * Servlet for adding participant username and password to database
  */
 public class StoreP extends HttpServlet {
     
