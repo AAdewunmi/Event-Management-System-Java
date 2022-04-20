@@ -16,6 +16,10 @@
         <servlet-name>AddEvent</servlet-name>
         <servlet-class>AddEvent</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewEvent1</servlet-name>
+        <servlet-class>ViewEvent1</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ValidateAd</servlet-name>
         <url-pattern>/ValidateAd</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>AddEvent</servlet-name>
         <url-pattern>/AddEvent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewEvent1</servlet-name>
+        <url-pattern>/ViewEvent1</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
