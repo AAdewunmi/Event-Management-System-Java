@@ -3,59 +3,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  *
  * @author adrianadewunmi
  */
 public class Register extends HttpServlet {
-
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Register</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Register at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
 
     /**
      * Handles the HTTP <code>POST</code> method.
@@ -68,17 +29,35 @@ public class Register extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       response.setContentType("text/html");
+       PrintWriter out = response.getWriter();
+        
+       String a1 = request.getParameter("Card_Number");
+       String a2 = request.getParameter("Expire_Date");
+       String a3 = request.getParameter("CCV_Number");
+       String a4 = request.getParameter("Card_Number");
+       String a5 = request.getParameter("Fee");
+       String a6 = request.getParameter("Venue");
+       String a7 = request.getParameter("Date");
+       
+       try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String conURL = "jdbc:mysql://localhost:3306/EventlyDB";
+            String dbusername = "root";
+            String dbuserpassword = "abc";
+            Connection con;
+            con = DriverManager.getConnection(conURL , dbusername, dbuserpassword);
+            Statement statement = con.createStatement();
+            String mysqlQuery = "insert into card values('"+a1+"','"+a2+"','"+a3+"','"+a4+"','"+a5+"','"+a6+"','"+a7+"') ";
+            statement.executeUpdate(mysqlQuery);
+            con.commit();
+            con.close();
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("Payment.html");
+            requestDispatcher.forward(request, response);
+       }catch(ServletException | IOException | ClassNotFoundException | SQLException e){
+           System.out.println("Exception Caught: " + e);
+       }
+       
     }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
 
 }

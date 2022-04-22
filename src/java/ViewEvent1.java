@@ -61,7 +61,7 @@ public class ViewEvent1 extends HttpServlet {
                  
             out.println("<center>");
             out.println("<table border=1 width=50% height=50%>");  
-            out.println("<tr><th>EventNumber</th><th>EventName</th><th>Coordinator</th><th>Coordinator Contact</th><th>Fees</th><th>Venue</th><th>Date</th>");  
+            out.println("<tr><th>Event Number</th><th>Event Name</th><th>Coordinator</th><th>Coordinator Contact</th><th>Fees</th><th>Venue</th><th>Date</th>");  
             
             while(resultSet.next()){
                 String a1 = request.getParameter("Event_Number");
