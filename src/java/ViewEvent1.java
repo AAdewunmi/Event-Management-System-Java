@@ -8,6 +8,7 @@ import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -50,28 +51,28 @@ public class ViewEvent1 extends HttpServlet {
             String dbuserpassword = "abc";
             Connection con;
             con = DriverManager.getConnection(conURL , dbusername, dbuserpassword);
-            
+            con.setAutoCommit(false);
             response.setContentType("text/html");
             Statement statement = con.createStatement();
             ResultSet resultSet = statement.executeQuery("select * from Event");
-            
+            out.println("<h1 style=\"text-align: center\">Welcome To Evently ... An Event Management Portal!</h1>");
             out.println("<center><h1>Event Details</h1></center>");
-            out.println("<br>");
             out.println("<div>");
                  
             out.println("<center>");
             out.println("<table border=1 width=50% height=50%>");  
             out.println("<tr><th>Event Number</th><th>Event Name</th><th>Coordinator</th><th>Coordinator Contact</th><th>Fees</th><th>Venue</th><th>Date</th>");  
-            
+            //request.getParameter
             while(resultSet.next()){
-                String a1 = request.getParameter("Event_Number");
-                String a2 = request.getParameter("Event_Name");
-                String a3 = request.getParameter("Coordinator_Name");
-                String a4 = request.getParameter("Coordinator_Number");
-                String a5 = request.getParameter("Fee");
-                String a6 = request.getParameter("Venue");
-                String a7 = request.getParameter("Date");
-                out.println("<tr><td>"+a1+"</td><td>"+a2+"</td><td>"+a3+"</td><td>"+a4+"</td><td>"+a5+"</td><td>"+a6+"</td><td>"+a7+"</td></tr>");
+                String n = resultSet.getString("Event_Number");
+                String nm = resultSet.getString("Event_Name");
+                String co = resultSet.getString("Coordinator_Name");
+                String cono = resultSet.getString("Coordinator_Number");
+                String f = resultSet.getString("Fee");
+                String v = resultSet.getString("Venue");
+                String d = resultSet.getString("Date");
+                out.println("<tr><td>" + n + "</td><td>" + nm +"</td><td>"+co+"</td><td>"+cono+"</td><td>"+f+"</td><td>"+v+"</td><td>"+d+"</td></tr>");   
+                
             }
             
             con.commit();

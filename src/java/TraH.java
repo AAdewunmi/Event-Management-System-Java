@@ -35,6 +35,7 @@ public class TraH extends HttpServlet {
         out.println("<!DOCTYPE html>");
         out.println("<html>");
         out.println("<head>");
+        out.println("<h1 style=\"text-align: center\">Welcome To Evently ... An Event Management Portal!</h1>");
         out.println("<title> Transactions Page</title>");
         out.println("<link rel=\"stylesheet\" href=\"total.css\">");
         out.println("<link href=\"https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap\" rel=\"stylesheet\">");
@@ -48,7 +49,7 @@ public class TraH extends HttpServlet {
             String dbuserpassword = "abc";
             Connection con;
             con = DriverManager.getConnection(conURL , dbusername, dbuserpassword);
-            
+            con.setAutoCommit(false); 
             Statement statement = con.createStatement();
             ResultSet resultSet = statement.executeQuery("select * from card");
             
@@ -60,10 +61,10 @@ public class TraH extends HttpServlet {
             
             while(resultSet.next()){
                 
-                String en = request.getParameter("Event_Number");
-                String re = request.getParameter("Event_Name");
-                String pd = request.getParameter("Expiry_Date");
-                String name = request.getParameter("Card_Name");
+                String en = resultSet.getString("Event_Number");
+                String re = resultSet.getString("Event_Name");
+                String pd = resultSet.getString("Expiry_Date");
+                String name = resultSet.getString("Card_Name");
                
                 out.println("<tr><td>" + en + "</td><td>" + re + "</td><td>"+name+"</td><td>" + pd +"</td></tr>"); 
              

@@ -31,12 +31,12 @@ public class Register extends HttpServlet {
        response.setContentType("text/html");
        PrintWriter out = response.getWriter();
         
-       String a1 = request.getParameter("Event_Name");
-       String a2 = request.getParameter("Event_Number");
-       String a3 = request.getParameter("Card_Number");
-       String a4 = request.getParameter("Expiry_Date");
-       String a5 = request.getParameter("CVV_Number");
-       String a6 = request.getParameter("Card_Name");
+       String a1 = request.getParameter("ename");
+       String a2 = request.getParameter("enum");
+       String a3 = request.getParameter("cardno");
+       String a4 = request.getParameter("edate");
+       String a5 = request.getParameter("cvv");
+       String a6 = request.getParameter("cname");
        
        try{
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -45,6 +45,7 @@ public class Register extends HttpServlet {
             String dbuserpassword = "abc";
             Connection con;
             con = DriverManager.getConnection(conURL , dbusername, dbuserpassword);
+            con.setAutoCommit(false);
             Statement statement = con.createStatement();
             String mysqlQuery = "insert into card values('"+a1+"','"+a2+"','"+a3+"','"+a4+"','"+a5+"','"+a6+"') ";
             statement.executeUpdate(mysqlQuery);
