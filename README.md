@@ -14,13 +14,13 @@
     
     Participant User: Register, Login, Pay for Event, Logout.
 
-
-3. What are the nice to haves?
-
-
-4. When will the project be complete?
+3. When will the project be complete?
     
     Once all MVP features have been developed.
+    
+4. What are the nice to haves?
+
+    Payment gateway i.e. PayPal, Apple Pay, Google Pay etc.
     
     
 ### Although the project is a work in progress, here is a screenshot of the landing page.
