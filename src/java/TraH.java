@@ -55,6 +55,7 @@ public class TraH extends HttpServlet {
             
             out.println("<center><h1> Transaction  Details </h1> </center> ");
             out.println("<div>");
+            out.println("<left><p><a href=\"TransactionDetails.html\"><button> Event Details Page </button> </a></p></left>");
             out.println("<center>");
             out.println("<table border=1 width=50% height=50%>");  
             out.println("<tr><th>Event No</th><th>Event Name</th><th>Name</th><th>Payment Date</th>"); 
@@ -75,6 +76,7 @@ public class TraH extends HttpServlet {
             out.println("</table>"); 
             out.println("</h3></center>");
             out.println("</div>");
+            out.println("<div><label class=\"topnav-right\"> © 1999-2022 Evently. All rights reserved. </label></div>");
             out.print("</body>");
             out.print("</html>");
             
