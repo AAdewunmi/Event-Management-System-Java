@@ -56,7 +56,7 @@ Payment gateway i.e. PayPal, Apple Pay, Google Pay etc.
 
 Email / Text message notification.
     
-## 5. Screenshot of the landing page
+## 5. Screenshot of the landing page:
 
 ![Image description](web/screenshot.jpeg)
 
