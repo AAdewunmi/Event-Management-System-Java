@@ -1,29 +1,46 @@
-# Welcome To Evently ... An Event Management Portal!
+# Evently ... An Event Management Portal!
 
-1. What is the project?
+## 1. Project description?
 
-    Evently is an Event Management System. 
-    
-    It is a Web Application for registering events,
-    
-    and it's being built using Java 11 technology.
+Evently is an Event Management System. It is a Web Application for registering events, and it's been built using HTML/CSS, Java 11 and MySQL.
 
-2. What is the MVP (Minimal Viable Product)?
+## 2. Installing:
 
-    Admin User: Login, Logout.
-    
-    Participant User: Register, Login, Pay for Event, Logout.
+Prerequisite: Apache NetBeans 13.0, Apache Tomcat Server 10.0, MySQL Server, MySQL Workbench (Optional ... I prefer to perform MySql operations at the command line "mysql -u root -p")
 
-3. When will the project be complete?
+1. Clone the repo.
+
+```
+https://github.com/AAdewunmi/Event-Management-System-Java.git
+```
+
+2. How to use:
+
+a. Open project in NetBeans
+b. Start SQL Server
+c. Start Apache Tomcat Server
+d. Run the application in the IDE (NetBeans)
+e. You have two choices at the "Evently" landing page
+
+(i) Login as an admin
+List of Admin usernames and password
+
+"A101"; "Admin101";
+
+"A202"; "Admin202";
+
+"A303"; "Admin303";
+
+"A404"; "Admin404";
+
+(ii) Login as a participant:
+- Register as new participant or 
+- Login as existing participant
     
-    Once all MVP features have been developed.
-    
-4. What are the nice to haves?
+## 3. Nice to haves:
 
     Payment gateway i.e. PayPal, Apple Pay, Google Pay etc.
     
-    
-### Although the project is a work in progress, here is a screenshot of the landing page.
-
+## 4 Screenshot of the landing page.
 
 ![Image description](web/screenshot.jpeg)
