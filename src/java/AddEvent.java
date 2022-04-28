@@ -62,8 +62,12 @@ public class AddEvent extends HttpServlet {
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("CreateE.html");
                 requestDispatcher.include(request, response);
 
-                out.println("<br><center><h3> Event Added</h3></center>");
-                System.out.println("Added to the database!!!");
+//                out.println("<br><center><h3> Event Added</h3></center>");
+//                System.out.println("Added to the database!!!");
+                response.setContentType("text/html");  
+                out.println("<script type=\"text/javascript\">");  
+                out.println("alert('Success! ... Event Details Added To Database!');");  
+                out.println("</script>");
                 con.commit();
                 con.close();
             }catch(ServletException | IOException | ClassNotFoundException | SQLException e){
