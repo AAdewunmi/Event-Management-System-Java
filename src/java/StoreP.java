@@ -44,34 +44,38 @@ public class StoreP extends HttpServlet {
         String a3 = confirmUserPassword;
         String a4 = participantsName;
         
-//        if(){
-//        }else{
-//        }
-        
-        if(a2.equals(a3)){
-            
-            try{
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                String conURL = "jdbc:mysql://localhost:3306/EventlyDB";
-                String dbusername = "root";
-                String dbuserpassword = "abc";
-                Connection con;
-                con = DriverManager.getConnection(conURL , dbusername, dbuserpassword);
-                Statement statement = con.createStatement();
-                String mysqlQuery = "insert into plogindetails values('"+a1+"','"+a2+"','"+a4+"')";
-                statement.executeUpdate(mysqlQuery);
-                RequestDispatcher requestDispatcher;
-                requestDispatcher = request.getRequestDispatcher("Plogin.html");
-                requestDispatcher.forward(request, response);
-                con.close();
-            }catch(ServletException | IOException | ClassNotFoundException | SQLException e){
-                System.out.println(e);
-            }
-        
-        }else{
-            out.println("<center><h1>!! Please Enter Password And Confirm Password Same !!</h1><center>");
+        if(a1.isBlank() && a2.isBlank() && a3.isBlank() && a4.isBlank()){
+            response.setContentType("text/html");  
+            out.println("<script type=\"text/javascript\">");  
+            out.println("alert('Please Enter Your Details!!!');");  
+            out.println("</script>");
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("Psignup.html");
             requestDispatcher.include(request, response);
+        }else{
+            if(a2.equals(a3)){
+                try{
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    String conURL = "jdbc:mysql://localhost:3306/EventlyDB";
+                    String dbusername = "root";
+                    String dbuserpassword = "abc";
+                    Connection con;
+                    con = DriverManager.getConnection(conURL , dbusername, dbuserpassword);
+                    Statement statement = con.createStatement();
+                    String mysqlQuery = "insert into plogindetails values('"+a1+"','"+a2+"','"+a4+"')";
+                    statement.executeUpdate(mysqlQuery);
+                    RequestDispatcher requestDispatcher;
+                    requestDispatcher = request.getRequestDispatcher("Plogin.html");
+                    requestDispatcher.forward(request, response);
+                    con.close();
+                }catch(ServletException | IOException | ClassNotFoundException | SQLException e){
+                    System.out.println(e);
+                }
+            }else{
+                out.println("<center><h1>!! Please Enter Password And Confirm Password Same !!</h1><center>");
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("Psignup.html");
+                requestDispatcher.include(request, response);
+            }
+            
         }
         
     }
