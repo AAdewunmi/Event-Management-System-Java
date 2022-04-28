@@ -65,7 +65,11 @@ public class ValidateAd extends HttpServlet {
                 requestDispatcher.forward(request, response);
                 // If username and password are invalid, enter else
             }else{
-                printWriterOut.println("<center><h4>Please Enter Valid Username & Password for Admin!!!</center></h4>");
+                //printWriterOut.println("<center><h4>Please Enter Valid Username & Password for Admin!!!</center></h4>");
+                response.setContentType("text/html");  
+                printWriterOut.println("<script type=\"text/javascript\">");  
+                printWriterOut.println("alert('Please Enter Valid Username & Password for Admin!!!');");  
+                printWriterOut.println("</script>");
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("Alogin.html");
                 requestDispatcher.include(request, response);
             }
