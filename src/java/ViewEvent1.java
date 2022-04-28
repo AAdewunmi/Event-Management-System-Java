@@ -57,7 +57,6 @@ public class ViewEvent1 extends HttpServlet {
             out.println("<h1 style=\"text-align: center\">Welcome To Evently ... An Event Management Portal!</h1>");
             out.println("<center><h1>Event Details</h1></center>");
             out.println("<div>");
-            out.println("<left><p><a href=\"EventDetails.html\"><button> Event Details Page </button> </a></p></left>");
             out.println("<center>");
             out.println("<table border=1 width=50% height=50%>");  
             out.println("<tr><th>Event Number</th><th>Event Name</th><th>Coordinator</th><th>Coordinator Contact</th><th>Fees</th><th>Venue</th><th>Date</th>");  
