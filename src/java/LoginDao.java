@@ -28,7 +28,8 @@ public class LoginDao {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             try (Connection conURL = DriverManager.getConnection("jdbc:mysql://localhost:3306/EventlyDB", "root", "abc")) {
-                PreparedStatement preparedStatement = conURL.prepareStatement("select * from plogindetails where User_Name=? and User_Password=?");
+                PreparedStatement preparedStatement = 
+                        conURL.prepareStatement("select * from plogindetails where User_Name=? and User_Password=?");
                 preparedStatement.setString(1, User_Name);
                 preparedStatement.setString(2, User_Password);
                 ResultSet resultSet = preparedStatement.executeQuery();

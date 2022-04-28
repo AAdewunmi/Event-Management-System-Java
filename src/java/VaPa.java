@@ -40,18 +40,28 @@ public class VaPa extends HttpServlet {
             String userName = request.getParameter("Pausername");
             String userPassword = request.getParameter("Papassword");
             
-            try {
-                if(LoginDao.validate(userName, userPassword)){
-                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("ParticipantEvent.html");
-                    requestDispatcher.forward(request, response);
-                }else{
-                    out.print("<center><h1>Sorry User Name and Password Incorrect</h1></center>");
-                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("Plogin.html");
-                    requestDispatcher.include(request, response);
+            if(userName.isBlank() && userPassword.isBlank()){
+                response.setContentType("text/html");  
+                out.println("<script type=\"text/javascript\">");  
+                out.println("alert('Please Enter Your Details!!!');");  
+                out.println("</script>");
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("Plogin.html");
+                requestDispatcher.include(request, response);
+            }else{
+                try {
+                    if(LoginDao.validate(userName, userPassword)){
+                        RequestDispatcher requestDispatcher = request.getRequestDispatcher("ParticipantEvent.html");
+                        requestDispatcher.forward(request, response);
+                    }else{
+                        out.print("<center><h1>Sorry User Name and Password Incorrect</h1></center>");
+                        RequestDispatcher requestDispatcher = request.getRequestDispatcher("Plogin.html");
+                        requestDispatcher.include(request, response);
+                    }
+                } catch (SQLException ex) {
+                    Logger.getLogger(VaPa.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            } catch (SQLException ex) {
-                Logger.getLogger(VaPa.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            }  
+            
         }
     }
 
