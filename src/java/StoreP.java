@@ -71,7 +71,10 @@ public class StoreP extends HttpServlet {
                     System.out.println(e);
                 }
             }else{
-                out.println("<center><h1>!! Please Enter Password And Confirm Password Same !!</h1><center>");
+                response.setContentType("text/html");  
+                out.println("<script type=\"text/javascript\">");  
+                out.println("alert('Please Enter Password And Confirm Password As Same!!!');");  
+                out.println("</script>");
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("Psignup.html");
                 requestDispatcher.include(request, response);
             }
