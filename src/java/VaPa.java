@@ -43,7 +43,7 @@ public class VaPa extends HttpServlet {
             if(userName.isBlank() && userPassword.isBlank()){
                 response.setContentType("text/html");  
                 out.println("<script type=\"text/javascript\">");  
-                out.println("alert('Please Enter Your Details!!!');");  
+                out.println("alert('Please Enter Your Login Details!!!');");  
                 out.println("</script>");
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("Plogin.html");
                 requestDispatcher.include(request, response);
@@ -53,7 +53,10 @@ public class VaPa extends HttpServlet {
                         RequestDispatcher requestDispatcher = request.getRequestDispatcher("ParticipantEvent.html");
                         requestDispatcher.forward(request, response);
                     }else{
-                        out.print("<center><h1>Sorry User Name and Password Incorrect</h1></center>");
+                        response.setContentType("text/html");  
+                        out.println("<script type=\"text/javascript\">");  
+                        out.println("alert('Sorry! ... User Name and Password Incorrect!!!');");  
+                        out.println("</script>");
                         RequestDispatcher requestDispatcher = request.getRequestDispatcher("Plogin.html");
                         requestDispatcher.include(request, response);
                     }
