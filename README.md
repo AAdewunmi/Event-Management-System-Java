@@ -11,7 +11,7 @@ It allows access to two types of users, with the following functions:
 
 ## 2. Tech Stack:
 
-HTML/CSS, Java 11, Java Servlet, JDBC, MySQL/MySQL Workbench/MySQL Server, Apache Tomcat Server, Git/GitHub.
+HTML/CSS/JavaScript, Java 11, Java Servlet, JDBC, MySQL/MySQL Workbench/MySQL Server, Apache Tomcat Server, Git/GitHub.
 
 ## 3. Installing:
 
